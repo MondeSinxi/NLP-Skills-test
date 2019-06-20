@@ -20,9 +20,7 @@ We use three methods for genrating vectors to feed into the models
 2. Lemantize all words to reduce all words to only their roots.
 3. Remove all stop words.
 
-The labeled data is evenly distributed, i.e there is an equal amount of representation of the two classes in the data set. Splitting the data into a test and 
-
-#### Tokenization Methods
+#### Tokenization
 
 * Bag-of-words: Use `CountVectorizer` from `sklearn.feature_extraction.text`, which performs a raw count of the number of tokens are present in the corpus. Each document is represented by a sparse vector
   
@@ -30,7 +28,7 @@ The labeled data is evenly distributed, i.e there is an equal amount of represen
   
 * Word embedding (word2vec): Each word is converted to a vector. Conversion could be trained from the available text or use a pre-trained model could be used to assign vectors. For the entire document, the average vector is obtained to feed into the models. For this report we use a pre-trained model from `Glov` that was trained from 2 billion tweets.
 
-#### Classification Models
+#### Models
 
 * Naive Bayes
 * SGD linear
@@ -47,24 +45,13 @@ The labeled data is evenly distributed, i.e there is an equal amount of represen
 
 |  | Naive-Bayes | SGD (linear SVM) | Logistic Regression | Decision Tree | Random Forrest | Neural Network | Deep Neural Network| 
 | ----- | -----  | ----- | ------ | ------ | ------ | ------ | ------ |
-| Bag-of-words | 0.81 | 0.93 | 0.95 | 0.97 | 0.90 | 0.91 | |
-| TF-IDF | 0.76 | 0.91 | 0.93 | 0.98 | 0.90 | 0.88 | |
-| word2vec | **N/A** |  | | | | | |
-
-Note - cannot used word2vec with Naive-Bayes, cannot accept negative values in the vector.
+| Bag-of-words |  | | | | | | |
+| TF-IDF | | | | | | | |
+| word2vec | | | | | | | |
 
 #### Plots of confusion matrices
 
-Here we present visualizations of the confusion matrices. These are graphic representations of the performance of the classification models.
-
-
-
-|True positive| False positive|
-|---|---|
-|**False Negative**|**True negative**|
-
-![alt text][logo]
-
+[]()
 
 #### Selecting the best model/tokenization
 
@@ -82,7 +69,7 @@ Here we present visualizations of the confusion matrices. These are graphic repr
 
 The `Vader` library wrapped in `sklearn` is used to perform a sentiment analysis. There exists a lexicon in `vader` that coumpunds the individual contributions of words to determine the components that convey sentiment i.e positive, negative and neutral. 
 
-An example sentence
+An example
 
 ### Topic Extraction
 
