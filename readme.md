@@ -1,5 +1,10 @@
 # Wells Fargo Pricing Data
 
+## Location of the report
+
+The notebooks used to compile the report can be found under the `notebooks` folder.
+The report can be found uner `notebooks/Reports/skills_test.md`
+
 ## Description of data
 
 The attached data file (skills_test.csv) contains text data pertaining to Wells
